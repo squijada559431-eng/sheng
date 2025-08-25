@@ -1,0 +1,42 @@
+package act;
+
+public abstract class GameCharacter {
+	protected String name;
+	private int hp;
+	protected int attackDamge;
+	
+	public GameCharacter(String name, int hp, int attackDamage) {
+		this.name = name;
+		this.hp = hp;
+		this.attackDamge = attackDamage;
+	}
+	
+	public abstract int attack();
+	public abstract int specialMove();
+	
+	public boolean isAlive() {
+		return hp > 0;
+		
+	}
+	
+	public void takeDamage(int damage) {
+		hp -= damage;
+		if (hp < 0) hp = 0;
+		
+	}
+	
+	public void showStatus() {
+		System.out.println(name + " HP: " + hp);
+		
+	}
+	
+	public String getStatus() {
+		return name + " HP: " + hp;
+		
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+}
