@@ -1,0 +1,24 @@
+package act;
+
+public class Mage extends GameCharacter {
+	public Mage(String name) {
+		super(name, 100, 20);
+		
+		
+		}
+
+	@Override
+	public int attack() {
+		System.out.println(name + " casts a fireball!");
+		return attack();
+	
+	}
+
+	@Override
+	public int specialMove() {
+		System.out.println(name + " uses Lightning Storm!");
+		return attackDamge + 15;
+		
+	}
+		
+	}
